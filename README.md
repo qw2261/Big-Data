@@ -25,6 +25,8 @@ The goals of this assignment are to
 
 In the first question, you will conduct **document clustering**. The dataset we’ll be using is a set of vectorized text documents. In today’s world, you can see applications of document clustering almost everywhere. For example, Flipboard uses LDA topic modelling, approximate nearest neighbor search, and clustering to realize their “similar stories / read more” recommendation feature. You can learn more by reading this blog post. To conduct document clustering, you will implement the classic iterative K-means clustering in Spark with different distance functions, and compare with the one implemented in Spark MLlib. 
 
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw1_2.png)
+
 In the second question, you will load data into Spark Dataframe and perform **binary classification** with Spark MLlib. We will use logistic regression model as our classifier, which is one of the foundational and widely used tools for making classifications. For example, Facebook uses logistic regression as one of the components in its online advertising system. You can read more in a publication [here](https://research.fb.com/wp-content/uploads/2016/11/practical-lessons-from-predicting-clicks-on-ads-at-facebook.pdf). 
 
 
