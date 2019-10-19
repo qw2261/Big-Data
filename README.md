@@ -9,7 +9,15 @@ The course projects of Columbia Big Data Analytics
 1. Implement and run in Spark
 2. Process data with Spark Dataframe, and perform graph analysis 
 
-The goals of this assignment are to (1) understand how to implement K-means clustering algorithm in Spark by utilizing *transformations and actions*, (2) understand the impact of using different distance measurements and initialization strategies in clustering, (3) learn how to use the built-in Spark MLlib library to conduct supervised and unsupervised learning, (4) have experience of processing data with *ML Pipeline* and *Dataframe*. 
+The goals of this assignment are to 
+
+(1) understand how to implement K-means clustering algorithm in Spark by utilizing *transformations and actions*, 
+
+(2) understand the impact of using different distance measurements and initialization strategies in clustering, 
+
+(3) learn how to use the built-in Spark MLlib library to conduct supervised and unsupervised learning, 
+
+(4) have experience of processing data with *ML Pipeline* and *Dataframe*. 
 
 In the first question, you will conduct **document clustering**. The dataset we’ll be using is a set of vectorized text documents. In today’s world, you can see applications of document clustering almost everywhere. For example, Flipboard uses LDA topic modelling, approximate nearest neighbor search, and clustering to realize their “similar stories / read more” recommendation feature. You can learn more by reading this blog post. To conduct document clustering, you will implement the classic iterative K-means clustering in Spark with different distance functions, and compare with the one implemented in Spark MLlib. 
 
