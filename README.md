@@ -39,8 +39,7 @@ Write a Spark program that implements a simple “People You Might Know” socia
 
 *Input:* 
 
-The input file contains the adjacency list and has multiple lines in the following format: <User> <TAB> <Friends>
- Here, <User> is a unique integer ID corresponding to a unique user and <Friends> is a comma separated list of unique IDs corresponding to the friends of the user with the unique ID <User>. Note that the friendships are mutual (i.e., edges are undirected): if A is friend with B then B is also friend with A. The data provided is consistent with that rule as there is an explicit entry for each side of each edge. 
+The input file contains the adjacency list and has multiple lines in the following format: <User> <TAB> <Friends>. Here, <User> is a unique integer ID corresponding to a unique user and <Friends> is a comma separated list of unique IDs corresponding to the friends of the user with the unique ID <User>. Note that the friendships are mutual (i.e., edges are undirected): if A is friend with B then B is also friend with A. The data provided is consistent with that rule as there is an explicit entry for each side of each edge. 
 
 *Algorithm:* 
 
@@ -48,10 +47,7 @@ Let us use a simple algorithm such that, for each user U, the algorithm recommen
 
 *Output:* 
 
-The output should contain one line per user in the following format: <User><Recommendations>
- Where <User> is a unique ID corresponding to a user and <Recommendations> is a list of unique IDs corresponding to the algorithm’s recommendation of people that <User> might know, ordered in decreasing number of mutual friends. If a user has less than 10 second-degree friends, output all of the, in decreasing order of the number of mutual 
-
-friends. If a user has no friends, providing an empty list of recommendations. If there are recommended users with the same number of mutual friends, then output those user IDs in numerically ascending order. 
+The output should contain one line per user in the following format: <User><Recommendations> Where <User> is a unique ID corresponding to a user and <Recommendations> is a list of unique IDs corresponding to the algorithm’s recommendation of people that <User> might know, ordered in decreasing number of mutual friends. If a user has less than 10 second-degree friends, output all of the, in decreasing order of the number of mutual friends. If a user has no friends, providing an empty list of recommendations. If there are recommended users with the same number of mutual friends, then output those user IDs in numerically ascending order. 
 
 
 
