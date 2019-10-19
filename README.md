@@ -6,7 +6,7 @@
 
 The course projects of Columbia Big Data Analytics
 
-## [Homework 1](https://github.com/qw2261/Big-Data/tree/master/HW1)
+## [Homework 1](https://github.com/qw2261/Big-Data/tree/master/HW1): Clustering and Binary Classification
 
 
 
@@ -31,7 +31,7 @@ In the second question, you will load data into Spark Dataframe and perform **bi
 
 
 
-## [Homework 2](https://github.com/qw2261/Big-Data/tree/master/HW2)
+## [Homework 2](https://github.com/qw2261/Big-Data/tree/master/HW2): “People You Might Know” Social Network
 
 
 
