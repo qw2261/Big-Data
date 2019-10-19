@@ -1,8 +1,12 @@
+- [COLUMBIA Big Data](#columbia-big-data)
+  * [Homework 1](#-homework-1--https---githubcom-qw2261-big-data-tree-master-hw1-)
+  * [Homework 2](#-homework2--https---githubcom-qw2261-big-data-tree-master-hw2-)
+
 # COLUMBIA Big Data 
 
 The course projects of Columbia Big Data Analytics
 
-[Homework 1](https://github.com/qw2261/Big-Data/tree/master/HW1)
+## [Homework 1](https://github.com/qw2261/Big-Data/tree/master/HW1)
 
 
 
@@ -25,7 +29,7 @@ In the second question, you will load data into Spark Dataframe and perform **bi
 
 
 
-[Homework2](https://github.com/qw2261/Big-Data/tree/master/HW2)
+## [Homework 2](https://github.com/qw2261/Big-Data/tree/master/HW2)
 
 
 
