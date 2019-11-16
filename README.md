@@ -51,7 +51,7 @@ The output should contain one line per user in the following format: <User><Reco
 
 
 
-Run Connected Components and PageRank with GraphFrames. You can refer to the GraphFrames documentation: https://graphframes.github.io/graphframes/docs/_site/index.html.
+Run Connected Components and PageRank with GraphFrames. You can refer to the [GraphFrames documentation](https://graphframes.github.io/graphframes/docs/_site/index.html).
 
 
 
