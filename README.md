@@ -1,7 +1,8 @@
 - [COLUMBIA Big Data](#columbia-big-data)
   * [Homework 1](#-homework-1--https---githubcom-qw2261-big-data-tree-master-hw1-)
   * [Homework 2](#-homework2--https---githubcom-qw2261-big-data-tree-master-hw2-)
-  * [Homework 2](#-homework3--https---githubcom-qw2261-big-data-tree-master-hw3-)
+  * [Homework 3](#-homework3--https---githubcom-qw2261-big-data-tree-master-hw3-)
+  * [Homework 4](#-homework4--https---githubcom-qw2261-big-data-tree-master-hw4-)
 
 # Big Data Analytics in Columbia 
 
