@@ -105,12 +105,13 @@ Using d3.js to do visualization
 
 ### Django and D3
 
-![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem2/step3/view_py.png)
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem 2/step3/view_py.png)
 
-![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem2/step3/output_result.png)
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem 2/step3/output_result.png)
 
 
 
-![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem3/step2/view_py.png)
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem 3/step2/view_py.png)
 
-![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem3/step2/result4.png)
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem 3/step2/result_4.png)
+
