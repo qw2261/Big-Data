@@ -1,8 +1,9 @@
 - [COLUMBIA Big Data](#columbia-big-data)
   * [Homework 1](#-homework-1--https---githubcom-qw2261-big-data-tree-master-hw1-)
   * [Homework 2](#-homework2--https---githubcom-qw2261-big-data-tree-master-hw2-)
+  * [Homework 2](#-homework3--https---githubcom-qw2261-big-data-tree-master-hw3-)
 
-# COLUMBIA Big Data 
+# Big Data Analytics in Columbia 
 
 The course projects of Columbia Big Data Analytics
 
@@ -56,3 +57,59 @@ Run Connected Components and PageRank with GraphFrames. You can refer to the [Gr
 
 
 PageRank measures the importance of each vertex in a graph, assuming an edge from u to v represents an endorsement of v’s importance by u. For example, if a Twitter user is followed by many others, the user will be ranked highly. 
+
+
+
+## [Homework 3](https://github.com/qw2261/Big-Data/tree/master/HW3): Twitter data analysis with Spark Streaming 
+
+In this assignment, implement a streaming analysis process. The architecture is as follows. A socket request data from twitter API and send data to spark streaming process. Spark read real time data and do analysis. It also save temp streaming results to Google Storage. After the streaming process terminate, it reads the final data from Google Storage and save it to BigQuery, and then clean the data in Storage. 
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_1.png)
+
+The streaming operation should be:
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_2.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_3.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_4.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_5.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_6.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_7.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_8.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_9.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/hw3_10.png)
+
+
+
+## [Homework 4](https://github.com/qw2261/Big-Data/tree/master/HW4): Data Visualization
+
+Using d3.js to do visualization
+
+### Barchart
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/html.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/js.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/barchart.png)
+
+
+
+### Django and D3
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem2/step3/view_py.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem2/step3/output_result.png)
+
+
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem3/step2/view_py.png)
+
+![](https://github.com/qw2261/Big-Data/blob/master/Pics/Problem3/step2/result4.png)
