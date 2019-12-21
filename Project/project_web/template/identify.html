@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition and Recommendation</title>
+    <link rel="stylesheet" href="{% static "css/identify.css" %}">
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{% static "js/identify.js" %}"></script>
+    <script src="{% static "js/webcam.js" %}"></script>
+
+</head>
+
+<body>
+    <div id="results">
+        <h2>Your captured image will appear here...</h2>
+    </div>
+
+
+    <h1> Get Your Entertainment Recommendations </h1>
+    <h1> Based on Your Selfie! </h1>
+    <div id="my_camera" style="width:320px; height:240px;"></div>
+
+    <!-- <div id="response">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/KdUGKRx-Z2s" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> -->
+
+    <ul id="demo"></ul>
+
+    <script language="JavaScript">
+        var img_interval;
+        Webcam.set({
+            width: 320,
+            height: 240,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        });
+        Webcam.attach('#my_camera');
+    </script>
+
+
+    <form>
+        <input type=button value="Take Snapshot" onClick="clearInterval(img_interval); take_snapshot();">
+    </form>
+    <form>
+        <input type=button value="Start" onClick="img_interval = setInterval(take_snapshot, 1500);">
+    </form>
+    <form>
+        <input type=button value="Stop" onClick="clearInterval(img_interval);">
+    </form>
+    <form name="uploadForm" method="Post" enctype="multipart/form-data">
+        <input type="file" id="myfile" name="file">
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <form>
+        <input type=button value="Show" onClick="loadDoc('/goData/', myFunction);">
+    </form>
+
+
+
+    <script language="JavaScript">
+        var form = document.forms.namedItem("uploadForm");
+        form.addEventListener('submit', function (ev) {
+
+            var oData = new FormData(form);
+
+
+            oData.append("CustomField", "This is some extra data");
+
+            var oReq = new XMLHttpRequest();
+            oReq.open("POST", "/recommend", true);
+            oReq.onload = function (oEvent) {
+                if (oReq.status == 200) {
+                    console.log("Success Upload!");
+                } else {
+                    console.log("Fail Upload!");
+                }
+            };
+
+            oReq.send(oData);
+            ev.preventDefault();
+
+
+            sleep(1500).then(() => {
+                var randVar = Math.random();
+                document.getElementById('results').innerHTML =
+                    '<h2>Here is result:</h2>' +
+                    '<img src="{% static "img/real_time.png" %}?' + randVar + '">';
+            });
+
+        }, false);
+
+
+        function loadDoc(url, cFunction) {
+            var xhttp;
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText)
+                    cFunction(myArr);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+        function myFunction(arr) {
+
+            var out = "";
+            var i;
+            for (i = 0; i < arr.length; i++) {
+                out += '<li><a href="' + arr[i].URL + '">' + arr[i].Name + '</a></li>';
+            }
+
+            
+            console.log(out);
+
+            document.getElementById("demo").innerHTML =
+                out;
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <script language="JavaScript">
+        function sleep(time) {
+            return new Promise((resolve) => setTimeout(resolve, time));
+        }
+
+        // function CheckImgExists(imgurl) {
+        //     var ImgObj = new Image();
+        //     ImgObj.src = imgurl;
+        //     if (ImgObj.fileSize > 0 || (ImgObj.width > 0 && ImgObj.height > 0)) {
+        //         console.log(imgurl + ' exist');
+        //         console.log(ImgObj.fileSize);
+        //         return true;
+        //     } else {
+        //         console.log(imgurl + ' not exist');
+        //         console.log(ImgObj.fileSize);
+        //         return false;
+        //     }
+        // }
+
+        function take_snapshot() {
+            // take snapshot and get image data
+            Webcam.snap(function (data_uri) {
+
+
+                console.log("Finished Snap");
+
+                Webcam.upload(data_uri, "recommend", function (code, text) {
+                    // document.getElementById('response').innerHTML = 
+                    // '<h2>' + code + '</h2>';
+
+                })
+
+                console.log("Finished Upload");
+
+                sleep(1500).then(() => {
+                    // display results in page
+
+                    // while (true) {
+                    //     var randVar = Math.random();
+                    //     if (CheckImgExists("")
+                    //     {
+                    //         document.getElementById('results').innerHTML =
+                    //             '<h2>Here is your image:</h2>' +
+                    //             '<img src="' + data_uri + '"/>' +
+                    //             '<h2>Here is result:</h2>' +
+                    //             '<img src="{% static "img/real_time.png" %}?' + randVar + '">';
+                    //         break;
+                    //     }
+
+                    // }
+
+                    var randVar = Math.random();
+                    document.getElementById('results').innerHTML =
+                        '<h2>Here is your image:</h2>' +
+                        '<img src="' + data_uri + '"/>' +
+                        '<h2>Here is result:</h2>' +
+                        '<img src="{% static "img/real_time.png" %}?' + randVar + '">';
+
+                    // console.log(CheckImgExists('{% static "img/real_time.png" %}'))
+
+                });
+
+            })
+
+        }
+    </script>
+
+    <!-- <div id="picture" style="width: 1000px; height: 600px;">
+            <img src="{% static "img/real_time.png" %}">
+    </div> -->
+
+</body>
+
+</html>

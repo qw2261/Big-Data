@@ -1,0 +1,26 @@
+/* .a-upload {
+    text-align: center;
+    padding: 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #DF4E85;
+    border: 0px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+} */
+
+.a-upload  input {
+    position: absolute;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.a-upload:hover {
+    opacity: 1;
+}

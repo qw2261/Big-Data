@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://tile-design-template.webflow.io/ -->
+{% load static %}
+
+<html data-wf-domain="tile-design-template.webflow.io" data-wf-page="566ded60394cebc21a1286a8"
+  data-wf-site="566ded60394cebc21a1286aa"
+  class="w-mod-js w-mod-no-touch w-mod-video w-mod-no-ios wf-lato-n3-active wf-lato-n4-active wf-lato-n7-active wf-lato-n9-active wf-lato-n1-active wf-lato-i1-active wf-lato-i3-active wf-lato-i4-active wf-lato-i7-active wf-lato-i9-active wf-active"
+  style="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Get Your Recommendation Based on Your Sentiment!</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="{% static "./css/tile-design-template.webflow.3d8844982.css" %}" rel="stylesheet" type="text/css">
+  <script src="{% static "./js/webfont.js" %}"></script>
+  <link rel="stylesheet" href="{% static "./css/css" %}">
+  <script type="text/javascript">WebFont.load({
+      google: {
+        families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]
+      }
+    });</script>
+  <script src="{% static "./js/modernizr.js" %}" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/jlzs.css" rel="stylesheet"
+    type="text/css">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/select.css" rel="stylesheet"
+    type="text/css">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/input.css" rel="stylesheet"
+    type="text/css">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/checkbox.css" rel="stylesheet"
+    type="text/css">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/jlzs.css" rel="stylesheet"
+    type="text/css">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/select.css" rel="stylesheet"
+    type="text/css">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/input.css" rel="stylesheet"
+    type="text/css">
+  <link href="chrome-extension://iihgchombimnadbbapofogflgbifgbgl/content/css/checkbox.css" rel="stylesheet"
+    type="text/css">
+
+
+  <link rel="stylesheet" href="{% static "css/getRecommend.css" %}">
+  <script src="{% static "js/webcam.js" %}"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+  <div class="contact-overlay">
+    <div class="w-container"><a class="close-link" data-ix="close-contact-overlay" href="https://qw2261.github.io/"
+        style="transition: opacity 0.4s ease 0s;">CLOSE&nbsp;✕</a>
+      <div class="form-wrapper">
+        <div class="contact-heading">Get in Touch</div>
+        <div class="small-divider"></div>
+        <div class="contact-text">Thank you for your interest! Please fill out the form below if you would like to work
+          together.</div>
+        <div class="w-form">
+          <form data-name="Email Form" id="email-form" name="email-form"><input class="text-field w-input"
+              data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text"><input
+              class="text-field w-input" data-name="Email" id="email" maxlength="256" name="email"
+              placeholder="Enter your email address" required="required" type="email"><textarea
+              class="text-area text-field w-input" data-name="Project details" id="Project-details" maxlength="5000"
+              name="Project-details" placeholder="What are your project details..."></textarea><input
+              class="submit-button w-button" data-wait="Please wait..." type="submit" value="Send"></form>
+          <div class="success-message w-form-done">
+            <p class="success-text">Thank you! Your submission has been received!</p>
+          </div>
+          <div class="w-form-fail">
+            <p>Oops! Something went wrong while submitting the form</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-section home-page-hero">
+    <div class="nav w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+      <div class="w-container">
+        <a class="w-nav-brand w--current" href="getRecommend">
+          <div class="logo-text">Get Your <strong data-new-link="true">Like</strong></div>
+        </a>
+        <nav class="nav-menu w-nav-menu w-preserve-3d" role="navigation"><a class="nav-link w-nav-link w--current"
+            href="getRecommend" style="max-width: 940px;">Home</a>
+          <a class="nav-link w-nav-link" href="https://qw2261.github.io/html/bio.html"
+            style="max-width: 940px;">About</a>
+          <a class="contact nav-link w-nav-link" data-ix="show-contact-overlay"
+            href="http://tile-design-template.webflow.io/#"
+            style="transition: opacity 0.35s ease 0s; max-width: 940px;">Contact</a>
+        </nav>
+
+        <div class="menu-button w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+      </div>
+      <div class="w-nav-overlay" data-wf-ignore=""></div>
+    </div>
+    <h1 class="home-page-heading" data-ix="hero-text"
+      style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 700ms ease 0s, transform 700ms ease 0s;">
+      Create Magic For You.</h1>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="home-page section top-section">
+    <div class="hero-container w-container">
+      <div class="w-clearfix">
+        <div class="_60block" data-ix="tile-1"
+          style="opacity: 1; transform: scaleX(1) scaleY(1) scaleZ(1); transition: opacity 700ms ease 0s, transform 700ms ease 0s;">
+          <!-- <a class="hero-tile w-inline-block" href="getRecommend">
+            <div class="tile-text">For<br>You.</div>
+            <div class="tile-image">
+              <div class="tile-overlay"></div>
+            </div>
+          </a> -->
+          <iframe id="player" width="100%" height="100%"
+            src="https://www.youtube.com/embed/KdUGKRx-Z2s/?rel=0&autoplay=1" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="_40block" data-ix="tile-3"
+          style="opacity: 1; transform: scaleX(1) scaleY(1) scaleZ(1); transition: opacity 700ms ease 0s, transform 700ms ease 0s;">
+          <div class="hero-tile w-dyn-list">
+            <div class="w-dyn-items">
+              <div class="w-dyn-item">
+                <a class="tile-link w-inline-block" href="getRecommend">
+                  <div class="tile-text">Take A<br>Selfie.</div>
+                  <div id="my_camera" class="tile-image"
+                    style="background-image: url(&#39;https://cb2.scene7.com/is/image/CB2/GalleryFrme11x14CrbnWhtMatSHS17/?$web_zoom$&190905021917&wid=450&hei=450&#39;);">
+                    <div class="tile-overlay"></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="_33block" data-ix="tile-3"
+          style="opacity: 1; transform: scaleX(1) scaleY(1) scaleZ(1); transition: opacity 700ms ease 0s, transform 700ms ease 0s;">
+          <div class="hero-tile">
+            <div class="w-dyn-list">
+              <div class="w-dyn-items">
+                <div class="w-dyn-item"><a class="tile-link w-inline-block" href="getRecommend">
+                    <div class="tile-text">Try to<br>Smile.</div>
+                    <div id="results" class="tile-processed"
+                      style="background-image: url(&#39;https://cb2.scene7.com/is/image/CB2/GalleryFrme11x14CrbnWhtMatSHS17/?$web_zoom$&190905021917&wid=450&hei=450&#39;);">
+                      <div class="tile-overlay"></div>
+                    </div>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="_33block" data-ix="tile-2"
+          style="opacity: 1; transform: scaleX(1) scaleY(1) scaleZ(1); transition: opacity 700ms ease 0s, transform 700ms ease 0s;">
+          <ul id="item-list" class="tile-list">
+            <li><a href="https://www.youtube.com/watch?v=YVVTZgwYwVo" onclick="return rewrite_youtube(this);"
+                style="color: aliceblue;">This is for
+                you</a></li>
+            <li><a href="https://www.youtube.com/watch?v=cPAbx5kgCJo" onclick="return rewrite_youtube(this);"
+                style="color: aliceblue;">This is for
+                you</a></li>
+            <li><a href="https://www.youtube.com/watch?v=93lrosBEW-Q" onclick="return rewrite_youtube(this);"
+                style="color: aliceblue;">This is for
+                you</a></li>
+          </ul>
+          <a class="hero-tile w-inline-block" data-ix="show-contact-overlay" href="getRecommend"
+            style="transition: color 0.4s ease 0s;">
+
+            <div class="tile-text">For<br>You.</div>
+
+            <div class="hire tile-image">
+              <div class="tile-overlay"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="_33block" data-ix="tile-4"
+          style="opacity: 1; transform: scaleX(1) scaleY(1) scaleZ(1); transition: opacity 700ms ease 0s, transform 700ms ease 0s;">
+          <div class="w-clearfix">
+            <div style="cursor: pointer;" onClick="clearInterval(img_interval); take_snapshot();"
+              class="social-block w-inline-block">
+              <span class="function-link nav-link">Take Snapshot</span>
+            </div>
+            <div style="cursor: pointer;" onClick="img_interval = setInterval(take_snapshot, 2500);"
+              class="facebook social-block w-inline-block">
+              <span class="function-link nav-link">Start Record</span>
+            </div>
+            <div style="cursor: pointer;" onClick="clearInterval(img_interval);"
+              class="pinterest social-block w-inline-block">
+              <span class="function-link nav-link">Stop Record</span>
+            </div>
+            <div style="cursor: pointer;" class="dribbble social-block w-inline-block">
+              <span class="function-link nav-link">
+                Upload Image
+              </span>
+              <form name="uploadForm" method="Post" enctype="multipart/form-data" class="a-upload">
+                <input type="file" id="myfile" name="file">
+                <br>
+                <input type="submit" value="SUBMIT">
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-3"><a class="logo-footer w-nav-brand w--current" href="getRecommend">
+            <div class="footer-logo logo-text">Get Your <strong data-new-link="true">Like</strong></div>
+          </a></div>
+        <div class="footer-link-col w-clearfix w-col w-col-9"><a class="contact footer-link nav-link"
+            data-ix="show-contact-overlay" href="getRecommend" style="transition: opacity 0.35s ease 0s;">Contact</a><a
+            class="footer-link nav-link" href="https://qw2261.github.io/html/bio.html">About</a><a
+            class="footer-link nav-link w--current" href="https://qw2261.github.io/">Home</a></div>
+      </div>
+    </div>
+  </div>
+  <script src="{% static "./js/jquery.min.js" %}" type="text/javascript"></script>
+  <script src="{% static "./js/webflow.7749a0b81.js" %}" type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+
+  <div id="jlzsCpn_0_component_0" class=" jlzs-container jlzs-gate" style="width: auto; height: 672px;"></div>
+
+  <script language="JavaScript">
+    var img_interval;
+    var click_snap = 0;
+    Webcam.set({
+      // width: 320,
+      // height: 240,
+      image_format: 'jpeg',
+      jpeg_quality: 90
+    });
+    Webcam.attach('#my_camera');
+
+    function sleep(time) {
+      return new Promise((resolve) => setTimeout(resolve, time));
+    }
+
+    function imgError(image) {
+      // image.style.dispaly = 'none';
+      // image.onerror = "";
+      image.src = '{% static "img/real_time.png" %}';
+      return true;
+    }
+
+    function change_background() {
+      document.getElementById('results').style.backgroundImage = 'url({% static "img/white.jpg" %})';
+    }
+
+    function rewrite_youtube(link) {
+      // console.log(link.href.split("=")[1]);
+
+      document.getElementById("player").src = "https://www.youtube.com/embed/" + link.href.split("=")[1] + "?rel=0&autoplay=1";
+      var xhttp;
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var myArr = JSON.parse(this.responseText)
+          // cFunction(myArr);
+        }
+      };
+      xhttp.open("GET", '/goUpdate/?' + link.href.split("=")[1], true);
+      xhttp.send();
+
+      return false;
+    }
+
+    var form = document.forms.namedItem("uploadForm");
+    form.addEventListener('submit', function (ev) {
+
+      var oData = new FormData(form);
+
+      console.log(oData);
+
+      oData.append("CustomField", "This is some extra data");
+
+      var oReq = new XMLHttpRequest();
+      oReq.open("POST", "/recommend", true);
+      oReq.onload = function (oEvent) {
+        if (oReq.status == 200) {
+          console.log("Success Upload!");
+        } else {
+          console.log("Fail Upload!");
+        }
+      };
+
+      oReq.send(oData);
+      ev.preventDefault();
+
+
+      sleep(3000).then(() => {
+        var randVar = Math.random();
+        document.getElementById('results').innerHTML =
+          '<img style="width: 100%; height: 100%" src="{% static "img/real_time.png" %}?' + randVar + '">';
+        // style="width: 100%; height: 100%"
+        sleep(1000).then(() => { loadDoc('/goData/', myFunction); });
+      });
+
+    }, false);
+
+    function loadDoc(url, cFunction) {
+      var xhttp;
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var myArr = JSON.parse(this.responseText)
+          cFunction(myArr);
+        }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    }
+
+    function myFunction(arr) {
+
+      var out = "";
+      var i;
+      for (i = 0; i < arr.length; i++) {
+        out += '<li><a href="' + arr[i].URL + '" onclick="return rewrite_youtube(this);" style="color: aliceblue;">' + arr[i].Name.slice(0, 20) + '</a></li>';
+      }
+
+      // console.log(out);
+
+      document.getElementById("item-list").innerHTML =
+        out;
+    }
+  </script>
+
+  <script language="JavaScript">
+    function take_snapshot() {
+      // take snapshot and get image data
+      Webcam.snap(function (data_uri) {
+
+        console.log("Click No: " + click_snap);
+
+        if (click_snap == 0) {
+          change_background();
+        }
+        click_snap += 1;
+
+
+        console.log("Finished Snap");
+
+        Webcam.upload(data_uri, "recommend", function (code, text) {
+          // document.getElementById('response').innerHTML = 
+          // '<h2>' + code + '</h2>';
+
+        })
+
+        console.log("Finished Upload");
+
+        sleep(2000).then(() => {
+          // display results in page
+          var randVar = Math.random();
+          document.getElementById('results').innerHTML =
+            // '<h2>Here is your image:</h2>' +
+            // '<img src="' + data_uri + '"/>' +
+            // '<h2>Here is result:</h2>' +
+            '<img style="width: 100%; height: 100%" src="{% static "img/real_time.png" %}?' + randVar + '" alt = "" onerror="imgError(this)">';
+          // alt = "" onerror="imgError(this);
+
+          sleep(1000).then(() => { loadDoc('/goData/', myFunction); });
+        });
+
+      })
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>

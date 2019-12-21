@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendation</title>
+    <link rel="stylesheet" href="{% static "css/recommend.css" %}">
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="{% static "js/recommend.js" %}"></script>
+
+    <script langauge="javascript">
+            var myChange = setInterval(refreshDiv, 2000);
+
+            function refreshDiv(){
+                var randVar = Math.random();
+                document.getElementById("picture").innerHTML = '<img src="{% static "img/real_time.png" %}?' + randVar +  '">';
+            }
+    </script>
+    
+
+</head>
+<body>
+
+    <div id="header" align="center">
+        <h1> Result Show</h1>
+    </div>
+
+    <div id="picture" style="width: 1000px; height: 600px;">
+            <img src="{% static "img/real_time.png" %}">
+    </div>
+
+
+        
+</body>
+</html>
